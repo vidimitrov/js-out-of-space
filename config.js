@@ -44,7 +44,7 @@ config = {
                 secretAccessKey: 'gurHpXjDpONzCCrvoA0ptNJBCpf/gM/NDibo7LyB',
                 bucket: 'js-out-of-space',
                 region: 'us-west-2',
-                assetHost: 'js-out-of-space.s3-us-west-2.amazonaws.com/'
+                assetHost: 'http://js-out-of-space.s3-us-west-2.amazonaws.com/'
             }
         }
     },
