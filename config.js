@@ -29,7 +29,8 @@ config = {
                 user: 'tztpphpwngattp',
                 password: 'RhV3HZhQkrPKKeCezJwEn3PYMO',
                 database: 'dcrf4jd3m1erfl',
-                port: '5432'
+                port: '5432',
+                charset  : 'utf8'
             }
         },
         server: {
@@ -42,7 +43,7 @@ config = {
                 accessKeyId: 'AKIAJPRVBQ6TUFDZ66IQ',
                 secretAccessKey: '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',
                 bucket: 'js-out-of-space',
-                region: 'Oregon',
+                region: 'us-west-2',
                 assetHost: 'js-out-of-space.s3.amazonaws.com'
             }
         }
