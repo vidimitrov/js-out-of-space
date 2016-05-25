@@ -12,7 +12,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://js-out-of-space.herokuapp.com',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'postmaster@jsoutof.space',
+                    pass: 'da7f65bac1da1381e616316e8869e0d8'
+                }
+            }
+        },
         database: {
             client: 'postgres',
             connection: {
@@ -21,15 +30,12 @@ config = {
                 password: 'RhV3HZhQkrPKKeCezJwEn3PYMO',
                 database: 'dcrf4jd3m1erfl',
                 port: '5432'
-            },
-            debug: false
+            }
         },
-
         server: {
             host: '0.0.0.0',
             port: process.env.PORT
         },
-
         storage: {
             active: 'ghost-s3',
             'ghost-s3': {
@@ -39,7 +45,7 @@ config = {
                 region: 'Oregon',
                 assetHost: 'js-out-of-space.s3.amazonaws.com'
             }
-        },
+        }
     },
 
     // ### Development **(default)**
