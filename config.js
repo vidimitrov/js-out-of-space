@@ -14,9 +14,13 @@ config = {
         url: 'http://js-out-of-space.herokuapp.com',
         mail: {},
         database: {
-            client: 'sqlite3',
+            client: 'postgres',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                host: 'postgres://tztpphpwngattp:RhV3HZhQkrPKKeCezJwEn3PYMO@ec2-54-83-47-88.compute-1.amazonaws.com:5432/dcrf4jd3m1erfl',
+                user: 'tztpphpwngattp',
+                password: 'RhV3HZhQkrPKKeCezJwEn3PYMO',
+                database: 'dcrf4jd3m1erfl',
+                port: '5432'
             },
             debug: false
         },
@@ -24,7 +28,18 @@ config = {
         server: {
             host: '0.0.0.0',
             port: process.env.PORT
-        }
+        },
+
+        storage: {
+            active: 'ghost-s3',
+            'ghost-s3': {
+                accessKeyId: 'AKIAJPRVBQ6TUFDZ66IQ',
+                secretAccessKey: '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',
+                bucket: 'js-out-of-space',
+                region: 'Oregon',
+                assetHost: 'js-out-of-space.s3.amazonaws.com'
+            }
+        },
     },
 
     // ### Development **(default)**
