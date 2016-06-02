@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://js-out-of-space.herokuapp.com',
+        url: 'http://jsoutof.space',
         mail: {
             transport: 'SMTP',
             options: {
